@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click) = "sidenav.toggle();">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Personajes Rick y Morty</span>
+
+    <span style="flex: 1 1 auto;;"></span>
+    <label style="font-size: 14px; margin-right: 20px;"></label>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened mode="side" style="width: 220px; background: greenyellow;">
+        <mat-nav-list>
+            <mat-list-item routerLink="/home/personaje">
+                <mat-icon matListItemIcon style="color:black;">group_add</mat-icon>
+                <div matListItemTitle style="color: gray;">Personajes</div>
+            </mat-list-item>
+            <mat-list-item routerLink="/home/locaciones">
+                <mat-icon matListItemIcon style="color:black;">explore</mat-icon>
+                <div matListItemTitle style="color: gray;">Locaciones</div>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div style="height: 90vh;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

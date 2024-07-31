@@ -1,0 +1,100 @@
+
+.body-contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedor-cartas{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-rows: var(1fr);
+    gap: 40px;
+}
+
+.cartas{
+    background-color: wheat;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    border-radius: 15px;
+    transition: border-width 0.5s ease-in-out;
+    border: 2px solid black;
+}
+
+.carta::before{
+    content: "";
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carta:hover{
+    border-width: 10px;
+}
+
+.paginador{
+    margin-top: 25px;
+}
+
+.card__text{
+    width: 100%;
+    padding: 20px 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscador{
+    width: 100%;
+    padding: 20px 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo{
+    font-size: 2rem;
+    height: 80px;
+    padding: 20px 10px;
+    text-align: center;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor-cartas{
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        grid-template-rows: var(1fr);
+        gap: 40px;
+    }
+}
+
+.burbujas{
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    font-family: 'Anton', sans-serif;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .button:active {
+    transform: scale(0.95);
+  }
+  
