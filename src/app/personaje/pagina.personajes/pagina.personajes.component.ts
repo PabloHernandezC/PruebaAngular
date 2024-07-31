@@ -43,7 +43,6 @@ export class PaginaPersonajesComponent implements OnInit {
       next: (data: any) => {
         this.totalPaginas = data.info.count;
         this.personajes.push(...data.results)
-        console.log(this.personajes)
       },
       error: (error) => {
 
