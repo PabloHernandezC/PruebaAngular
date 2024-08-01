@@ -10,21 +10,23 @@ const routes: Routes = [
     component: LayoutComponent,
     children:[
       {
+        path:'',
+        redirectTo: 'personaje', 
+        pathMatch:'full',
+      },
+      {
         path:'personaje',
         component: PaginaPersonajesComponent, 
-        pathMatch:'full'
       },
       {
         path:'locaciones',
         component: PaginaLocacionesComponent, 
-        pathMatch:'full'
-      },
-      {
-        path:'**',
-        redirectTo: 'personaje',
-        pathMatch:'full'
       }
     ]
+  },
+  {
+    path:'**',
+    redirectTo: '',
   }
 ]
 

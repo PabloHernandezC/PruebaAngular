@@ -5,7 +5,7 @@ import { LayoutComponent } from './compartido/layout/layout.component';
 const routes: Routes = [
   {
     path:'',
-    component: LayoutComponent,
+    redirectTo: '/home/personaje',
     pathMatch: 'full'
   },
   {
